@@ -1,0 +1,40 @@
+
+# panel
+(sleep 1s && tint2) &
+
+# Enable as required
+#xbacklight -set 100 &
+#/usr/bin/synclient TouchpadOff=1 &
+#xxkb &
+#setxkbmap us &
+xcompmgr -r10 -F -f -D5 -C -o0.8 &
+# -c
+
+# File manager (daemon mode)
+(sleep 2 && spacefm -d) &
+
+# Set wallpaper
+(sleep 1s && nitrogen --restore) &
+
+#Bluetooth systray applet
+blueman-applet &
+
+# Networking system tray applet
+(sleep 3 && nm-applet) &
+
+# Volume control
+(sleep 3 && volumeicon) &
+
+# Onscreen system stats
+(sleep 2 && conky) &
+conky -c .conky_cal & 
+conky -c .conky_clock & 
+conky -c .conky_stod & 
+conky -c .conky_weather & 
+conky -c .conky_speed & 
+conky -c .conky_tor &
+conky -c .conky_gmail &
+
+
+# Desktop launcher dock
+(sleep 2 && plank) &
