@@ -1,0 +1,48 @@
+# this file goes in ~
+background yes
+use_xft yes
+xftfont monospace:pixelsize=11
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type override
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+#stippled_borders 0
+border_margin 4
+border_width 0
+default_color cyan
+default_shade_color black
+default_outline_color white
+alignment top_left
+gap_x 13
+gap_y 320
+no_buffers yes
+cpu_avg_samples 2
+net_avg_samples 2
+override_utf8_locale yes
+#use_spacer yes
+
+maximum_width 350
+
+#color1 DC143C
+color1 cyan
+color2 DC143C
+
+
+
+TEXT
+#leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
+                       
+┌───────────┐            
+│ Календарь ├─────────●
+└────┬──────┘             
+
+#${execpi 60 cal_var=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$cal_var"'\b'/'\1${color2}'"$cal_var"'${color}'/}
+${execpi 60 sh ~/.calendar.sh}
